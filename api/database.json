@@ -1,0 +1,29 @@
+{
+  "places": [
+    {
+      "id": 1,
+      "name": "Italy",
+      "visa_required": false
+    },
+    {
+      "id": 2,
+      "name": "Switzerland",
+      "visa_required": true
+    },
+    {
+      "id": 3,
+      "name": "France",
+      "visa_required": false
+    }
+  ],
+  "interests": [
+    {
+      "placeId": "1",
+      "name": "Leaning Tower of Pisa",
+      "description": "Tourist Location",
+      "cost": "Venice",
+      "review": "Great location with excellent food at the foot of Tower",
+      "id": 1
+    }
+  ]
+}
