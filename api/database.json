@@ -1,0 +1,37 @@
+{
+  "places": [
+    {
+      "id": 1,
+      "name": "Italy",
+      "visa_required": false
+    },
+    {
+      "id": 2,
+      "name": "Switzerland",
+      "visa_required": true
+    },
+    {
+      "id": 3,
+      "name": "France",
+      "visa_required": false
+    }
+  ],
+  "interests": [
+    {
+      "placeId": "3",
+      "name": "Eifel tower",
+      "description": "Tourist Attraction",
+      "cost": "100.00",
+      "review": "Great location, good people",
+      "id": 1
+    },
+    {
+      "placeId": "2",
+      "name": "Food Market",
+      "description": "Local market where you can bargain and try local foods ",
+      "cost": "10.00",
+      "review": "You can definitely get things for a lower price if you are willing to bargain!",
+      "id": 2
+    }
+  ]
+}
