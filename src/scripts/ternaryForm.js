@@ -59,7 +59,6 @@ const ternaryForm = {
         let interestCountryField = document.createElement("fieldset");
 
         let interestCountryLabel = document.createElement("label");
-        interestCostLabel.textContent = "Pick a City "
 
         let interestCountry = document.createElement("select");
         interestCountry.setAttribute("id", "interest_country");

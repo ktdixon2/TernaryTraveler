@@ -27,6 +27,21 @@ const dbCalls = {
                 "Content-Type": "application/json"
             }
         })
+    },
+
+    getOneInterest(interestId) {
+        return fetch(`http://localhost:8088/interests/${interestId}`)
+            .then(response => response.json())
+    },
+
+    putEditedInterest(interestId, interestToEdit) {
+        return fetch(`http://localhost:8088/interests/${interestId}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(interestToEdit)
+        })
     }
 }
 

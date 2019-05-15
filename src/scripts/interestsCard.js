@@ -39,6 +39,14 @@ const interestsCard = {
         // Create edit and delete button for each of the objest created
         let editButton = document.createElement("button");
         editButton.textContent = "Edit"
+        editButton.addEventListener("click", () => {
+            let articleId = event.target.parentNode.id
+            let interestId = articleId.split("--")[1];
+            dbCalls.getOneInterest(interestId)
+                .then(response => {
+                    interestEdit.appendEditToDom(articleId, response)
+                })
+        })
 
         let deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete"
