@@ -2,6 +2,7 @@ import dbCalls from "./dbCalls"
 import interestEdit from "./interestEdit"
 import interestList from "./interestList"
 
+// Module that is creating a div container for each of the data provided by user to be appended to.
 const interestsCard = {
 
     interestBuilder(interestObj) {
@@ -51,6 +52,7 @@ const interestsCard = {
         let deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete"
         deleteButton.addEventListener("click", () => {
+            // Conditional that asks if user is sure they'd like to delete an added post.
             if (confirm("Are you sure you'd like to delete this interest?")) {
                 let interestId = event.target.parentNode.id.split("--")[1];
                 dbCalls.deleteInterest(interestId)
@@ -62,6 +64,7 @@ const interestsCard = {
 
         let horizontalRule = document.createElement("hr");
 
+        // Appending the labels and provided data to the div card.
         interestDiv.appendChild(interestNameLabel);
         interestDiv.appendChild(interestName);
         interestDiv.appendChild(interestDesLabel);
