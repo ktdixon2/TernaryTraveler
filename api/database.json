@@ -1,37 +1,42 @@
 {
-  "places": [
-    {
-      "id": 1,
-      "name": "Italy",
-      "visa_required": false
-    },
-    {
-      "id": 2,
-      "name": "Switzerland",
-      "visa_required": true
-    },
-    {
-      "id": 3,
-      "name": "France",
-      "visa_required": false
-    }
-  ],
-  "interests": [
-    {
-      "id": 1,
-      "placeId": 1,
-      "name": "Local Market",
-      "description": "Local market where you can try purchase local products and try the local food",
-      "cost": 5,
-      "review": "10/10, would recommend"
-    },
-    {
-      "placeId": "3",
-      "name": "Eifel Tower",
-      "description": "Tourist location",
-      "cost": "25.00",
-      "review": "Excellent tourist location. Highly recommended to go to the top of the tower. Has such a great view that is perfect for photography!",
-      "id": 2
-    }
-  ]
+    "places": [
+        {
+            "id": 1,
+            "name": "Italy",
+            "visa_required": false
+        },
+        {
+            "id": 2,
+            "name": "Switzerland",
+            "visa_required": true
+        },
+        {
+            "id": 3,
+            "name": "France",
+            "visa_required": false
+        },
+        {
+            "id": 4,
+            "name": "Germany",
+            "visa_required": true
+        }
+    ],
+    "interests": [
+        {
+            "id": 1,
+            "placeId": 1,
+            "name": "Local Market",
+            "description": "Local market where you can try purchase local products and try the local food",
+            "cost": 5,
+            "review": "10/10, would recommend"
+        },
+        {
+            "placeId": "3",
+            "name": "Eifel Tower",
+            "description": "Tourist location",
+            "cost": "25.00",
+            "review": "Excellent tourist location. Highly recommended to go to the top of the tower. Has such a great view that is perfect for photography!",
+            "id": 2
+        }
+    ]
 }
