@@ -1,8 +1,10 @@
 import dbCalls from "./dbCalls"
 import interestList from "./interestList"
 
+// Module that allows user to edit the cost and review of a chosen interest.
 const interestEdit = {
 
+    // Function that updates and appends new info provided by the user.
     appendEditToDom(articleId, objToEdit) {
 
         let interestCostField = document.createElement("p");
@@ -25,6 +27,7 @@ const interestEdit = {
         interestReviewField.appendChild(interestReviewLabel);
         interestReviewField.appendChild(interestReviewInput);
 
+        // Create an update button and add an eventListener to create the edited object.
         let updateButton = document.createElement("button");
         updateButton.textContent = "Update Info"
 
@@ -36,6 +39,7 @@ const interestEdit = {
                 cost: interestCostInput.value,
                 review: interestReviewInput.value
             }
+            // Database call that puts updated info back into the object and appends
             dbCalls.putEditedInterest(objToEdit.id, editedInterest)
                 .then(response => {
                     interestList.appendToDom()

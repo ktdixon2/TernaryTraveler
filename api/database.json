@@ -18,19 +18,19 @@
   ],
   "interests": [
     {
-      "placeId": "3",
-      "name": "Eifel tower",
-      "description": "Tourist Attraction",
-      "cost": "100.00",
-      "review": "Great location, good people",
-      "id": 1
+      "id": 1,
+      "placeId": 1,
+      "name": "Local Market",
+      "description": "Local market where you can try purchase local products and try the local food",
+      "cost": 5,
+      "review": "10/10, would recommend"
     },
     {
-      "placeId": "2",
-      "name": "Food Market",
-      "description": "Local market where you can bargain and try local foods ",
-      "cost": "10.00",
-      "review": "You can definitely get things for a lower price if you are willing to bargain!",
+      "placeId": "3",
+      "name": "Eifel Tower",
+      "description": "Tourist location",
+      "cost": "25.00",
+      "review": "Excellent tourist location. Highly recommended to go to the top of the tower. Has such a great view that is perfect for photography!",
       "id": 2
     }
   ]

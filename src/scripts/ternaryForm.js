@@ -1,10 +1,21 @@
 import dbCalls from "./dbCalls"
 import interestList from "./interestList"
 
+// Module that creates the form for user input.
+
 const ternaryForm = {
+    // Function that clear input for after user has filled in all the values for a new interest.
+
+    clearInputForm() {
+        document.querySelector("#interest_name").value = "";
+        document.querySelector("#interest_description").value = "";
+        document.querySelector("#interest_cost").value = "";
+        document.querySelector("#interest_review").value = "";
+    },
 
     createAndAppendForm() {
 
+        // Create a fieldset, input and giving id's to be targeted
         let interestHeader = document.createElement("h3");
         interestHeader.textContent = "Add A New Interest!";
 
@@ -17,6 +28,7 @@ const ternaryForm = {
         interestNameInput.setAttribute("id", "interest_name");
         interestNameInput.setAttribute("name", "interest_name");
 
+        // Appending label and input to the fieldsets
         interestNameField.appendChild(interestNameLabel);
         interestNameField.appendChild(interestNameInput);
 
@@ -63,6 +75,7 @@ const ternaryForm = {
         let interestCountry = document.createElement("select");
         interestCountry.setAttribute("id", "interest_country");
 
+        // Call the database to return all the places in the database for a dropdown menu.
         dbCalls.getAllPlaces()
             .then(parsedPlaces => {
                 parsedPlaces.forEach(place => {
@@ -83,6 +96,7 @@ const ternaryForm = {
 
         saveButton.addEventListener("click", this.handleNewInterest)
 
+        // Append header, fieldsets and buttons to the DOM by querySelecting the form
         let interestFormFrag = document.createDocumentFragment();
         interestFormFrag.appendChild(interestHeader);
         interestFormFrag.appendChild(interestNameField);
@@ -97,6 +111,7 @@ const ternaryForm = {
 
     },
 
+    // Function that creates a new interest object based the info that the user provided
     handleNewInterest() {
         let inputInterestName = document.querySelector("#interest_name").value;
         let inputInterestDescription = document.querySelector("#interest_description").value;
@@ -112,9 +127,12 @@ const ternaryForm = {
             review: inputInterestReview
         }
 
+        // Call to the database that'll append the new posts to the DOM and clearing the inputs.
         dbCalls.postAllInterests(newInterestObj)
             .then(response => {
                 interestList.appendToDom()
+
+                ternaryForm.clearInputForm();
             })
     }
 }
